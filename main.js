@@ -1,0 +1,1 @@
+(()=>{"use strict";const t=document.getElementById("dropbtn"),e=document.getElementById("sidebar");t.onclick={mydropDown:t=>{t.classList.toggle("show")}}(e)})();
