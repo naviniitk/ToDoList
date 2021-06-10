@@ -1,5 +1,21 @@
-import mydropDown from './dropdown';
+import dropDowm from './dropdown';
 
-const button = document.getElementById('dropbtn');
-const sidebar = document.getElementById('sidebar');
-button.onclick = mydropDown(sidebar);
+function myFunction() {
+  document.getElementById('myDropdown').classList.toggle('show');
+}
+
+const button = document.getElementById('btn');
+button.onclick = myFunction;
+
+window.onclick = function (event) {
+  if (!event.target.matches('.dropbtn')) {
+    const dropdowns = document.getElementsByClassName('dropdown-content');
+    let i;
+    for (i = 0; i < dropdowns.length; i++) {
+      const openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+};
