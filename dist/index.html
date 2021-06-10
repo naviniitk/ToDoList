@@ -7,14 +7,37 @@
     </head>
     <body>
         <div class="dropdown">
+          <div id="navbar">
             <button class="dropbtn" id="btn">Inbox</button>
+            <button class="dropbtn" id="add">add</button>
+          </div>
             <div id="myDropdown" class="dropdown-content">
-              <a href="#home">Home</a>
+              <a href="#events">Events</a>
               <a href="#about">About</a>
-              <a href="#contact">Contact</a>
+              <a href="#projects">Projects</a>
             </div>
           </div>
-        
+        <div id="fillform">
+          <form id="addform">
+            <label for="title">Title</label><br>
+            <input class="field" id="title" name="title">
+            <br>
+            <label for="description">Discription</label><br>
+            <input class="field" id="description" name="description">
+            <br>
+            <label for="date">Due Date</label><br>
+            <input class="field" type="date" id="date" name="date">
+            <br>
+            <button type="submit" id="submit">Submit</button>
+            <button id="close">Close</button>
+          </form>
+        </div>
+        <div id="reminder">
+          <h1>Upcoming</h1>
+          <div id="events">
+
+          </div>
+        </div>
         <script src="main.js"></script>
     </body>
 
