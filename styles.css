@@ -3,17 +3,21 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 .dropbtn {
-    background-color: #dd1919;
+    background-color: transparent;
     color: white;
-    min-width: 160px;
-    padding: 16px;
+    padding: 12px;
     font-size: 16px;
     border: none;
     cursor: pointer;
   }
   
-  .dropbtn:hover, .dropbtn:focus {
-    background-color: #a71414;
+  #add {
+    position: absolute;
+    right: 0px;
+  }
+
+  .dropbtn:hover {
+    background-color: lightcoral;
   }
   
   .dropdown {
@@ -37,6 +41,46 @@ body {
     display: block;
   }
   
+  #navbar {
+    width: 100vw;
+    background-color: crimson;
+
+  }
+
   .dropdown a:hover {background-color: #ddd;}
   
   .show {display: block;}
+
+
+  #fillform {
+    display: none;
+    background-color: lightcyan;
+    font-size: 20px;
+    width: 50%;
+    margin: auto;
+    margin-top: 2rem;
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .field {
+    width: 80%;
+    height: 24px;
+    margin: 1rem;
+    padding: auto;
+  }
+
+  #submit {
+    border: none;
+    background-color: lightseagreen;
+    font-size: 16px;
+    padding: 5px;
+    
+  }
+  #close {
+    border: none;
+    background-color: lightseagreen;
+    font-size: 16px;
+    padding: 5px;
+    
+  }
