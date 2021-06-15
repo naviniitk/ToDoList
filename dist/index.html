@@ -12,26 +12,33 @@
             <button class="dropbtn" id="add">add</button>
           </div>
             <div id="myDropdown" class="dropdown-content">
-              <a href="#events">Events</a>
-              <a href="#about">About</a>
+              <a href="#all">All</a>
+              <a href="#today">Today</a>
               <a href="#projects">Projects</a>
             </div>
           </div>
-        <div id="fillform">
+        <dialog id="fillform">
           <form id="addform">
             <label for="title">Title</label><br>
-            <input class="field" id="title" name="title">
+            <input class="field" id="title" name="title" required>
             <br>
             <label for="description">Discription</label><br>
-            <input class="field" id="description" name="description">
+            <input class="field" id="description" name="description" required>
+            <br>
+            <label for="priority">Priority</label><br>
+            <select class="field" id="priority" required>
+              <option value="low" default>Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
             <br>
             <label for="date">Due Date</label><br>
-            <input class="field" type="date" id="date" name="date">
+            <input class="field" type="date" id="date" name="date" required>
             <br>
             <button type="submit" id="submit">Submit</button>
             <button id="close">Close</button>
           </form>
-        </div>
+        </dialog>
         <div id="reminder">
           <h1>Upcoming</h1>
           <div id="events">

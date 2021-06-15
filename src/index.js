@@ -1,8 +1,4 @@
-function Remind (title, desc, date) {
-  this.title = title;
-  this.desc = desc;
-  this.date = date;
-}
+import { mySubmit } from './submit';
 
 function myFunction() {
   document.getElementById('myDropdown').classList.toggle('show');
@@ -11,10 +7,10 @@ function myFunction() {
 const button = document.getElementById('btn');
 button.onclick = myFunction;
 
-window.onclick = function (event) {
+window.onclick = (event) => {
   if (!event.target.matches('.dropbtn')) {
     const dropdowns = document.getElementsByClassName('dropdown-content');
-    for (let i = 0; i < dropdowns.length; i++) {
+    for (let i = 0; i < dropdowns.length; i += 1) {
       const openDropdown = dropdowns[i];
       if (openDropdown.classList.contains('show')) {
         openDropdown.classList.remove('show');
@@ -33,19 +29,6 @@ close.onclick = () => {
   document.getElementById('fillform').style.display = 'none';
 };
 
-const events = document.getElementById('events');
+const submit = document.getElementById('submit');
 
-document.getElementById('submit').onclick = () => {
-  const title = document.getElementById('title').value;
-  const desc = document.getElementById('description').value;
-  const date = document.getElementById('date').value;
-  const reminder = new Remind(title, desc, date);
-  list.push(reminder);
-  showList(list);
-};
-
-const list = [];
-
-function showList(e) {
-  document.getElementById('events').innerText = e.title;
-}
+submit.onclick = mySubmit;
